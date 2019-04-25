@@ -16,4 +16,5 @@ RUN npm run build
 # Default command for nginx is to start up nginx, no 
 # need to spcify command.
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
